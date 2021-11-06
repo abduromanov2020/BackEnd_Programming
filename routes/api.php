@@ -20,6 +20,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+# Endpoint Animal
 # method get, endpoint animals
 Route::get('/animals', [AnimalController::class, 'index']);
 
@@ -33,6 +34,19 @@ Route::put('/animals/{id}', [AnimalController::class, 'update']);
 Route::delete('/animals/{id}', [AnimalController::class, 'destroy']);
 
 
+
+# endpoint student
 # Route Students 
 Route::get('/students', [StudentController::class, 'index']);
+
+# Route Post endpoint student
 Route::post('/students', [StudentController::class, 'store']);
+
+# Route Show endpoint student
+Route::get('/students/{id}', [StudentController::class, 'show']);
+
+# Route Update endpoint student
+Route::put('/students/{id}', [StudentController::class, 'update']);
+
+# Route Delete endpoint student
+Route::delete('/students/{id}', [StudentController::class, 'destroy']);
